@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Home Page</title>
+	<meta charset="UTF-8">
+	<style>
+		body{ background: url("Home.jpg");
+		background-size: 90%;}
+		
+	</style>
+	</head>
+
+	<body>
+            <form action ="login" method="post">
+	<div class="back"></div>
+<nav>
+  <a href="#">Home</a>
+  <a href="#">Sale</a>
+  <a href="#">Popular Categories</a>
+  <a href="#">Payment Option</a>
+  <a href="#">Delivery Location</a>
+</nav>
+<pre><label style ="text-align:Left;color:White;font-style:italic;"><font size="1000"> Search</label>                      <input type = "text"
+               />  id = "Search"
+                 value = "Search"
+		 size = "30"
+		 number = "40"/></pre>
+        <input type="button" value = "Login " onClick = "self.location='index3.html'">
+
+
+<style>	
+
+@import url('https://fonts.googleapis.com/css?family=Oswald:500');
+
+.thx{
+  position: fixed;
+  left:50%;
+  transform:translateX(-50%);
+  bottom: 15px;
+}
+nav{
+  width: 100%;
+  position: fixed;
+  top:60px;
+  text-align:Left;
+}
+nav a{
+  font-family: 'Oswald', sans-serif;
+  font-weight:500;
+  text-transform:uppercase;
+  text-decoration:none;
+  color:white;
+  margin:0 15px;
+  font-size:24px;
+  letter-spacing:1px;
+  position:relative;
+  display:inline-block;
+}
+nav a:before{
+  content:'';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background:#16151b;
+  top:47%;
+  animation:out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+}
+nav a:hover:before{
+  animation:in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+
+}
+@keyframes in{
+  0%{
+    width: 0;
+    left:0;
+    right:auto;
+  }
+  100%{
+    left:0;
+    right:auto;
+    width: 100%;
+  }
+}
+@keyframes out{
+  0%{
+    width:100%;
+    left: auto;
+    right: 0;
+  }
+  100%{
+    width: 0;
+    left: auto;
+    right: 0;
+  }
+}
+@keyframes show{
+  0%{
+    opacity:0;
+    transform:translateY(-10px);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@for $i from 1 through 5 {
+  nav a:nth-child(#{$i}){
+    animation:show .2s #{$i*0.1+1}s ease 1 both;
+  }
+}
+
+	</style>
+            </form>
+	</body>
+</html>
+
